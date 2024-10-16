@@ -72,11 +72,128 @@
 					<li class="nav-item">
 						<a class="nav-link disabled" href="#">Disabled</a>
 					</li>
+					<li>
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logowanieModal">
+							Zaloguj się
+						</button>
+					</li>
+					<li>
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rejestracjaModal">
+							Zarejestruj się
+						</button>
+					</li>
 				</ul>
 			</div>
 		</nav>
 	</header>
 	
+<!-- Modal LOGOWANIE -->
+<div class="modal" id="logowanieModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Zarejestruj się</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form action="#" class="was-validated" method="POST">
+					<div class="mt-1">
+						<label for="Email" class="form-label">E-mail:</label>
+						<input type="email" class="form-control" id="Email" placeholder="Wprowadź adres e-mail" name="email" minlength="3" pattern=".{1,}[@]{1}.{1,}" required>
+					</div>
+					<div class="mt-1">
+						<label for="Password" class="form-label">Hasło:</label>
+						<input type="password" class="form-control" id="Password" placeholder="Wprowadź hasło" name="password" minlength="3" required>
+					</div>
+					<div class="mt-1 form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="PamiecL" name="rememberMe" value="yes">
+						<label class="form-check-label" for="PamiecL">Zapamiętaj mnie</label>
+					</div>
+					<button type="submit" class="mt-2 btn btn-primary">Zaloguj się</button>
+				</form>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zamknij</button>
+      </div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal REJESTRACJA -->
+<div class="modal" id="rejestracjaModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Zarejestruj się</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form action="#" class="was-validated" method="POST">
+					<div class="mt-1">
+						<label for="Email" class="form-label">E-mail:</label>
+						<input type="email" class="form-control" id="Email" placeholder="Wprowadź adres e-mail" name="email" minlength="3" pattern=".{1,}[@]{1}.{1,}" required>
+					</div>
+					<div class="mt-1">
+						<label for="Password" class="form-label">Hasło:</label>
+						<input type="password" class="form-control" id="Password" placeholder="Wprowadź hasło" name="password" minlength="3" required>
+					</div>
+					<div class="mt-1">
+						<label for="PasswordRepeat" class="form-label">Powtórz hasło:</label>
+						<input type="password" class="form-control" id="PasswordRepeat" placeholder="Wprowadź hasło" name="passwordRepeat" minlength="3" required>
+					</div>
+					<div class="mt-1">
+						<label for="Imie" class="form-label">Imię:</label>
+						<input type="text" class="form-control" id="Imie" placeholder="Wprowadź imię" name="firstName" minlength="3" required>
+					</div>
+					<div class="mt-1">
+						<label for="Nazwisko" class="form-label">Nazwisko:</label>
+						<input type="text" class="form-control" id="Nazwisko" placeholder="Wprowadź nazwisko" name="lastName" minlength="3" required>
+					</div>
+					<div class="mt-1">
+						<label for="Wiek" class="form-label">Wiek:</label>
+						<input type="number" class="form-control" id="Wiek" placeholder="Wprowadź wiek" name="age" max="200" required>
+					</div>
+					<div class="mt-1 mb-1">
+					<label>Płeć:<br>
+						<div class="form-check">
+							<input type="radio" class="form-check-input" id="PlecM" name="Gender" value="m">
+							<label class="form-check-label" for="PlecM">Mężczyzna</label>
+						</div>
+						<div class="form-check">
+							<input type="radio" class="form-check-input" id="PlecK" name="Gender" value="k">
+							<label class="form-check-label" for="PlecK">Kobieta</label>
+						</div>
+						<div class="form-check">
+							<input type="radio" class="form-check-input" id="PlecB" name="Gender" value="b" checked>
+							<label class="form-check-label" for="PlecB">Wolę nie odpowiadać</label>
+						</div>
+					</label>
+					</div>
+					<div class="mt-1 form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="DaneOsobowe" name="agreement" value="yes" required>
+						<label class="form-check-label" for="DaneOsobowe">Zgadzam się na przetwarzanie moich danych osobowych</label>
+					</div>
+					<div class="mt-1 form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="PamiecR" name="rememberMe" value="yes">
+						<label class="form-check-label" for="PamiecR">Zapamiętaj mnie</label>
+					</div>
+					<button type="submit" class="mt-2 btn btn-primary">Zarejestruj się</button>
+				</form>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zamknij</button>
+      </div>
+		</div>
+	</div>
+</div>
+
 <!--KARUZELA/baner-->
 <div id="top-baner-carousel" class="carousel slide" data-bs-ride="carousel">
 
