@@ -16,6 +16,33 @@
 			display: block;
 			margin: auto;
 		}
+
+		.gold-circular-border{
+			padding: 0.9em;
+			border-width: 2.52px;
+			border-color: #FF9800;
+			border-style: solid;
+			border-radius: 50%;
+		}
+
+		.gold-header{
+			color: #FF9800;
+			font-family: monospace;
+			font-weight: bold;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.not-a-row{
+			width: auto;
+			margin-bottom: 0.5em;
+		}
+
+		.profession-card{
+			margin: auto;
+			margin-top: 0.9em;
+			margin-bottom: 0.9em;
+		}
 	</style>
 </head>
 	
@@ -83,7 +110,7 @@
 </div>
 	
 	
-	
+<div class="container-fluid">
 <div class="container-fluid mt-3">
 	<div class="row h-100 p-2">
 		<!--SIDEBAR-->
@@ -137,17 +164,102 @@
 
 		<!--MAIN-->
 		<div class="col-sm-9">
-			<h2>TITLE HEADING</h2>
-			<h5>Title description, Dec 7, 2020</h5>
-			<div class="fakeimg">Fake Image</div>
-			<p>Some text..</p>
-			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+			<h2>Najlepsza szkoła w Radomiu</h2>
+			<h4>Co nas wyróżnia?</h4>
+			<h4 class="small">Szeroki zakres praktycznych i współczesnych zawodów:</h4>
+			<div class="row container-fluid">
 
-			<h2 class="mt-5">TITLE HEADING</h2>
-			<h5>Title description, Sep 2, 2020</h5>
-			<div class="fakeimg">Fake Image</div>
-			<p>Some text..</p>
-			<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+				<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
+					<div class="card-body row">
+						<div class="not-a-row col-1-">
+							<img class="gold-circular-border" src="piorun.png">
+						</div>
+						<div class="not-a-row col-4-">
+							<h4 class="gold-header">TECHNIK ELEKTRYK</h4>
+						</div>
+						<p style="overflow-wrap: anywhere;">
+							Może być zatrudniany w m. in. zakładach energetycznych, przemysłowych, produkcyjnych, usługowych, naprawczych…
+						</p>
+					</div>
+				</div>
+
+				<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
+					<div class="card-body row">
+						<div class="not-a-row col-1-">
+							<img class="gold-circular-border" src="piorun.png">
+						</div>
+						<div class="not-a-row col-4-">
+							<h4 class="gold-header">TECHNIK ENERGETYK</h4>
+						</div>
+						<p>
+							Może być zatrudniany w elektrociepłowniach, elektrowniach, zakładach energetycznych, sieciach elektroenergetycznych…
+						</p>
+					</div>
+				</div>
+			
+				<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
+					<div class="card-body row">
+						<div class="not-a-row col-1-">
+							<img class="gold-circular-border" src="piorun.png">
+						</div>
+						<div class="not-a-row col-4-">
+							<h4 class="gold-header">TECHNIK INFROMATYK</h4>
+						</div>
+						<p>
+							Może być zatrudniany we wszystkich zakładach, przedsiębiorstwach, instytucjach, w których użytkuje się i wykorzystuje…
+						</p>
+					</div>
+				</div>
+
+			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
+				<div class="card-body row">
+					<div class="not-a-row col-1-">
+						<img class="gold-circular-border" src="piorun.png">
+					</div>
+					<div class="not-a-row col-4-">
+						<h4 class="gold-header">TECHNIK MECHANIK</h4>
+					</div>
+					<p style="overflow-wrap: anywhere;">
+						Może być zatrudniany m. in. w zakładach mechanicznych przy obsłudze obrabiarek standardowych i sterowanych numerycznie…
+					</p>
+				</div>
+			</div>
+
+			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
+				<div class="card-body row">
+					<div class="not-a-row col-1-">
+						<img class="gold-circular-border" src="piorun.png">
+					</div>
+					<div class="not-a-row col-5-">
+						<h4 class="gold-header">TECHNIK MECHATRONIK</h4>
+					</div>
+					<p style="overflow-wrap: anywhere;">
+						Może być zatrudniany m. in. w zakładach o zautomatyzowanym i zrobotyzowanym procesie produkcji, przy sterowaniu…
+					</p>
+				</div>
+			</div>
+			
+			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
+				<div class="card-body row">
+					<div class="not-a-row col-1-">
+						<img class="gold-circular-border" src="piorun.png">
+					</div>
+					<div class="not-a-row col-4-">
+						<h4 class="gold-header">TECHNIK PROGRAMISTA</h4>
+					</div>
+					<p style="overflow-wrap: anywhere;">
+						Może być zatrudniany we wszystkich zakładach, przedsiębiorstwach, instytucjach, w których użytkuje się i wykorzystuje…
+					</p>
+				</div>
+			</div>
+
+			
+			<h4 class="small">Współpraca z firmami:</h4>
+
+		</div>
+	</div>
+
+			
 		</div>
 	</div>
 </div>
