@@ -40,23 +40,31 @@
 			margin: 0.1em;
 		}
 
+		h4{
+			width: auto;
+			overflow-wrap: break-word;
+		}
+
 		.gold-header{
 			color: #FF9800;
 			font-family: monospace;
 			font-weight: bold;
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
+			align-self: center;
 		}
 
 		.not-a-row{
-			width: auto;
-			margin-bottom: 0.5em;
+			width: fit-content;
+			min-width: 0;
+			margin-bottom: 0.3em;
+			display: flex;
+			justify-content: center;
 		}
 
 		.profession-card{
 			margin: auto;
-			margin-top: 0.9em;
-			margin-bottom: 0.9em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			padding: 0.1em;
 			top: 0;
 			-webkit-box-shadow: 0 0 0 0 rgb(255, 255, 255);
 			-moz-box-shadow: 0 0 0 0 rgb(255, 255, 255);
@@ -74,7 +82,7 @@
 	</style>
 </head>
 	
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navigation" data-bs-offset="50">
 <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
 <!--NAGŁÓWEK + NAWIGACJA-->
@@ -85,28 +93,27 @@
 		</div>
 
 		<!--NAWIGACJA-->
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navigation">
 			<div class="container-fluid">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link active" href="#">Active</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Disabled</a>
-					</li>
-					<li>
-						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logowanieModal">
+					<ul class="navbar-nav justify-content-center">
+						<li class="nav-item">
+								<a class="nav-link" href="#top-baner-carousel-image-holder">Start</a>
+						</li>
+						<li class="nav-item">
+								<a class="nav-link" href="#profession-card-group-container">Kierunki kształcenia</a>
+						</li>
+						<li class="nav-item">
+								<a class="nav-link" href="#cooperation-with-companies-group">Współpraca z firmami</a>
+						</li>
+				</ul>
+				<ul class="navbar-nav ml-auto justify-content-end">
+					<li class="nav-toggler">
+						<button type="button" class="btn btn-outline-success me-3" data-bs-toggle="modal" data-bs-target="#logowanieModal">
 							Zaloguj się
 						</button>
 					</li>
-					<li>
-						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rejestracjaModal">
+					<li class="nav-toggler">
+						<button type="button" class="btn btn-outline-success me-3" data-bs-toggle="modal" data-bs-target="#rejestracjaModal">
 							Zarejestruj się
 						</button>
 					</li>
@@ -233,7 +240,7 @@
   </div>
   
   <!--zdjęcia-->
-  <div class="carousel-inner" style="background:rgba(0, 0, 0, .95) url(szkola1.jpg);background-blend-mode: darken;">
+  <div class="carousel-inner" style="background:rgba(0, 0, 0, .95) url(szkola1.jpg);background-blend-mode: darken;" id="top-baner-carousel-image-holder">
     <div class="carousel-item active">
       <img src="szkola1.jpg" alt="Los Angeles" class="d-block top-baner-carousel-image">
     </div>
@@ -309,111 +316,153 @@
 
 		<!--MAIN-->
 		<div class="col-sm-9">
+			<!-- Karty zawodów -->
+			<div class="container" id="profession-card-group-container">
 			<h2>Najlepsza szkoła w Radomiu</h2>
 			<h4>Co nas wyróżnia?</h4>
 			<h4 class="small">Szeroki zakres praktycznych i współczesnych zawodów:</h4>
 			<div class="row container-fluid">
 
-				<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
-					<div class="card-body row">
+				<div class="card col-lg-5 profession-card border-secondary">
+					<div class="card-body">
+						<div class="row flex-nowrap" style="width: 100%;">
 							<i class="col-1- bi bi-lightning-fill gold-circular-border"></i>
-						<div class="not-a-row col-4-">
-							<h4 class="gold-header">TECHNIK ELEKTRYK</h4>
+							<div class="not-a-row col-4-">
+								<h4 class="gold-header">TECHNIK ELEKTRYK</h4>
+							</div>
 						</div>
-						<p style="overflow-wrap: anywhere;">
-							Może być zatrudniany w m. in. zakładach energetycznych, przemysłowych, produkcyjnych, usługowych, naprawczych…
-						</p>
+						<div class="row">
+							<p style="overflow-wrap: anywhere;">
+								Może być zatrudniany w m. in. zakładach energetycznych, przemysłowych, produkcyjnych, usługowych, naprawczych…
+							</p>
+						</div>
 					</div>
 				</div>
 
-				<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
-					<div class="card-body row">
-						<i class="col-1- bi bi-battery-full gold-circular-border"></i>
-						<div class="not-a-row col-4-">
-							<h4 class="gold-header">TECHNIK ENERGETYK</h4>
+				<div class="card col-lg-5 profession-card border-secondary">
+					<div class="card-body">
+						<div class="row flex-nowrap" style="width: 100%;">
+							<i class="col-1- bi bi-battery-full gold-circular-border"></i>
+							<div class="not-a-row col-4-">
+								<h4 class="gold-header">TECHNIK ENERGETYK</h4>
+							</div>
 						</div>
-						<p>
-							Może być zatrudniany w elektrociepłowniach, elektrowniach, zakładach energetycznych, sieciach elektroenergetycznych…
-						</p>
+						<div class="row">
+							<p>
+								Może być zatrudniany w elektrociepłowniach, elektrowniach, zakładach energetycznych, sieciach elektroenergetycznych…
+							</p>
+						</div>
 					</div>
 				</div>
 			
-				<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
-					<div class="card-body row">
-						<i class="col-1- bi bi-keyboard gold-circular-border"></i>
-						<div class="not-a-row col-4-">
-							<h4 class="gold-header">TECHNIK INFROMATYK</h4>
+				<div class="card col-lg-5 profession-card border-secondary">
+					<div class="card-body">
+						<div class="row flex-nowrap" style="width: 100%;">
+							<i class="col-1- bi bi-keyboard gold-circular-border"></i>
+							<div class="not-a-row col-4-">
+								<h4 class="gold-header">TECHNIK INFROMATYK</h4>
+							</div>
 						</div>
-						<p>
+						<div class="row">
+							<p>
+								Może być zatrudniany we wszystkich zakładach, przedsiębiorstwach, instytucjach, w których użytkuje się i wykorzystuje…
+							</p>
+						</div>
+					</div>
+				</div>
+
+			<div class="card col-lg-5 profession-card border-secondary">
+				<div class="card-body">
+					<div class="row flex-nowrap" style="width: 100%;">
+						<i class="col-1- bi bi-gear-fill gold-circular-border"></i>
+						<div class="not-a-row col-4-">
+							<h4 class="gold-header">TECHNIK MECHANIK</h4>
+						</div>
+					</div>
+					<div class="row">
+						<p style="overflow-wrap: anywhere;">
+							Może być zatrudniany m. in. w zakładach mechanicznych przy obsłudze obrabiarek standardowych i sterowanych numerycznie…
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col-lg-5 profession-card border-secondary">
+				<div class="card-body">
+					<div class="row flex-nowrap" style="width: 100%;">
+						<i class="col-1- bi bi-cpu gold-circular-border"></i>
+						<div class="not-a-row col-5-">
+							<h4 class="gold-header">TECHNIK MECHATRONIK</h4>
+						</div>
+					</div>
+					<div class="row">
+						<p style="overflow-wrap: anywhere;">
+							Może być zatrudniany m. in. w zakładach o zautomatyzowanym i zrobotyzowanym procesie produkcji, przy sterowaniu…
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card col-lg-5 profession-card border-secondary">
+				<div class="card-body">
+					<div class="row flex-nowrap" style="width: 100%;">
+						<i class="col-1- bi bi-code-slash gold-circular-border"></i>
+						<div class="not-a-row col-4-">
+							<h4 class="gold-header">TECHNIK PROGRAMISTA</h4>
+						</div>
+					</div>
+					<div class="row">
+						<p style="overflow-wrap: anywhere;">
 							Może być zatrudniany we wszystkich zakładach, przedsiębiorstwach, instytucjach, w których użytkuje się i wykorzystuje…
 						</p>
 					</div>
-				</div>
+				</div>	
+			</div>
 
-			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
-				<div class="card-body row">
-					<i class="col-1- bi bi-gear-fill gold-circular-border"></i>
-					<div class="not-a-row col-4-">
-						<h4 class="gold-header">TECHNIK MECHANIK</h4>
+			<div class="card col-lg-5 profession-card border-secondary">
+				<div class="card-body">
+					<div class="row flex-nowrap" style="width: 100%;">
+						<i class="col-1- bi bi-recycle gold-circular-border"></i>
+						<div class="not-a-row col-4-">
+							<h4 class="gold-header">TECHNIK URZĄDZEŃ ENERGII ODNAWIALNEJ</h4>
+						</div>
 					</div>
-					<p style="overflow-wrap: anywhere;">
-						Może być zatrudniany m. in. w zakładach mechanicznych przy obsłudze obrabiarek standardowych i sterowanych numerycznie…
-					</p>
+					<div class="row">
+						<p style="overflow-wrap: anywhere;">
+							Może być zatrudniany w przedsiębiorstwach wykorzystujących i pozyskujących energię z odnawialnych źródeł bez start dla środowiska… 
+						</p>
+					</div>
 				</div>
 			</div>
 
-			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
-				<div class="card-body row">
-					<i class="col-1- bi bi-cpu gold-circular-border"></i>
-					<div class="not-a-row col-5-">
-						<h4 class="gold-header">TECHNIK MECHATRONIK</h4>
+			<div class="card col-lg-5 profession-card border-secondary">
+				<div class="card-body">
+					<div class="row flex-nowrap" style="width: 100%;">
+						<i class="col-1- bi bi-person-wheelchair gold-circular-border"></i>
+						<div class="not-a-row col-4- profession-card-icon-and-title-holder">
+							<h4 class="gold-header">SZKOŁA MISTRZOSTWA SPORTOWEGO</h4>
+						</div>
 					</div>
-					<p style="overflow-wrap: anywhere;">
-						Może być zatrudniany m. in. w zakładach o zautomatyzowanym i zrobotyzowanym procesie produkcji, przy sterowaniu…
-					</p>
+					<div class="row">
+						<p style="overflow-wrap: anywhere;">
+							Może być zatrudniany we wszystkich zakładach, przedsiębiorstwach, instytucjach, w których użytkuje się i wykorzystuje systemy informatyczne…
+						</p>
+					</div>
 				</div>
+			</div>
+
 			</div>
 			
-			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
-				<div class="card-body row">
-					<i class="col-1- bi bi-code-slash gold-circular-border"></i>
-					<div class="not-a-row col-4-">
-						<h4 class="gold-header">TECHNIK PROGRAMISTA</h4>
-					</div>
-					<p style="overflow-wrap: anywhere;">
-						Może być zatrudniany we wszystkich zakładach, przedsiębiorstwach, instytucjach, w których użytkuje się i wykorzystuje…
-					</p>
-				</div>
 			</div>
-
-			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
-				<div class="card-body row">
-					<i class="col-1- bi bi-recycle gold-circular-border"></i>
-					<div class="not-a-row col-4-">
-						<h4 class="gold-header">TECHNIK URZĄDZEŃ ENERGII ODNAWIALNEJ</h4>
-					</div>
-					<p style="overflow-wrap: anywhere;">
-						Może być zatrudniany w przedsiębiorstwach wykorzystujących i pozyskujących energię z odnawialnych źródeł bez start dla środowiska… 
-					</p>
-				</div>
+			<!-- Współpraca z firmami -->
+			<div class="container" id="cooperation-with-companies-group">
+				<h4 class="small">Współpraca z firmami:</h4>
 			</div>
-
-			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
-				<div class="card-body row">
-					<i class="col-1- bi bi-person-wheelchair gold-circular-border"></i>
-					<div class="not-a-row col-4-">
-						<h4 class="gold-header">SZKOŁA MISTRZOSTWA SPORTOWEGO</h4>
-					</div>
-					<p style="overflow-wrap: anywhere;">
-						Może być zatrudniany we wszystkich zakładach, przedsiębiorstwach, instytucjach, w których użytkuje się i wykorzystuje systemy informatyczne…
-					</p>
-				</div>
-			</div>
-
 			
-			<h4 class="small">Współpraca z firmami:</h4>
 
 		</div>
+
+		
 	</div>
 
 			
