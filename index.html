@@ -9,7 +9,15 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+	<!-- Biublioteka ikon-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 	<style>
+		:root{
+			--icon-element-size: 1.8em;
+			--icon-size: 2.5em;
+		}
+
 		.top-baner-carousel-image{
 			width:auto;
 			height: 300px;
@@ -18,11 +26,18 @@
 		}
 
 		.gold-circular-border{
-			padding: 0.9em;
 			border-width: 2.52px;
+			color: #FF9800;
 			border-color: #FF9800;
 			border-style: solid;
 			border-radius: 50%;
+			font-size: var(--icon-size);
+			height: var(--icon-element-size);
+			width: var(--icon-element-size);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0.1em;
 		}
 
 		.gold-header{
@@ -42,6 +57,19 @@
 			margin: auto;
 			margin-top: 0.9em;
 			margin-bottom: 0.9em;
+			top: 0;
+			-webkit-box-shadow: 0 0 0 0 rgb(255, 255, 255);
+			-moz-box-shadow: 0 0 0 0 rgb(255, 255, 255);
+			box-shadow: 0 0 0 0 rgb(255, 255, 255);
+			position: relative;
+			transition: top ease 0.5s;
+		}
+
+		.profession-card:hover{
+			top: -0.18em;
+			-webkit-box-shadow: -1px 22px 27px -8px rgba(108, 109, 130, 1);
+			-moz-box-shadow: -1px 22px 27px -8px rgba(108, 109, 130, 1);
+			box-shadow: -1px 22px 27px -8px rgba(108, 109, 130, 1);
 		}
 	</style>
 </head>
@@ -288,9 +316,7 @@
 
 				<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
 					<div class="card-body row">
-						<div class="not-a-row col-1-">
-							<img class="gold-circular-border" src="piorun.png">
-						</div>
+							<i class="col-1- bi bi-lightning-fill gold-circular-border"></i>
 						<div class="not-a-row col-4-">
 							<h4 class="gold-header">TECHNIK ELEKTRYK</h4>
 						</div>
@@ -302,9 +328,7 @@
 
 				<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
 					<div class="card-body row">
-						<div class="not-a-row col-1-">
-							<img class="gold-circular-border" src="piorun.png">
-						</div>
+						<i class="col-1- bi bi-battery-full gold-circular-border"></i>
 						<div class="not-a-row col-4-">
 							<h4 class="gold-header">TECHNIK ENERGETYK</h4>
 						</div>
@@ -316,9 +340,7 @@
 			
 				<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
 					<div class="card-body row">
-						<div class="not-a-row col-1-">
-							<img class="gold-circular-border" src="piorun.png">
-						</div>
+						<i class="col-1- bi bi-keyboard gold-circular-border"></i>
 						<div class="not-a-row col-4-">
 							<h4 class="gold-header">TECHNIK INFROMATYK</h4>
 						</div>
@@ -330,9 +352,7 @@
 
 			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
 				<div class="card-body row">
-					<div class="not-a-row col-1-">
-						<img class="gold-circular-border" src="piorun.png">
-					</div>
+					<i class="col-1- bi bi-gear-fill gold-circular-border"></i>
 					<div class="not-a-row col-4-">
 						<h4 class="gold-header">TECHNIK MECHANIK</h4>
 					</div>
@@ -344,9 +364,7 @@
 
 			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
 				<div class="card-body row">
-					<div class="not-a-row col-1-">
-						<img class="gold-circular-border" src="piorun.png">
-					</div>
+					<i class="col-1- bi bi-cpu gold-circular-border"></i>
 					<div class="not-a-row col-5-">
 						<h4 class="gold-header">TECHNIK MECHATRONIK</h4>
 					</div>
@@ -358,14 +376,36 @@
 			
 			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
 				<div class="card-body row">
-					<div class="not-a-row col-1-">
-						<img class="gold-circular-border" src="piorun.png">
-					</div>
+					<i class="col-1- bi bi-code-slash gold-circular-border"></i>
 					<div class="not-a-row col-4-">
 						<h4 class="gold-header">TECHNIK PROGRAMISTA</h4>
 					</div>
 					<p style="overflow-wrap: anywhere;">
 						Może być zatrudniany we wszystkich zakładach, przedsiębiorstwach, instytucjach, w których użytkuje się i wykorzystuje…
+					</p>
+				</div>
+			</div>
+
+			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
+				<div class="card-body row">
+					<i class="col-1- bi bi-recycle gold-circular-border"></i>
+					<div class="not-a-row col-4-">
+						<h4 class="gold-header">TECHNIK URZĄDZEŃ ENERGII ODNAWIALNEJ</h4>
+					</div>
+					<p style="overflow-wrap: anywhere;">
+						Może być zatrudniany w przedsiębiorstwach wykorzystujących i pozyskujących energię z odnawialnych źródeł bez start dla środowiska… 
+					</p>
+				</div>
+			</div>
+
+			<div class="card col-lg-5 profession-card border-secondary" style="padding: 0.8em;">
+				<div class="card-body row">
+					<i class="col-1- bi bi-person-wheelchair gold-circular-border"></i>
+					<div class="not-a-row col-4-">
+						<h4 class="gold-header">SZKOŁA MISTRZOSTWA SPORTOWEGO</h4>
+					</div>
+					<p style="overflow-wrap: anywhere;">
+						Może być zatrudniany we wszystkich zakładach, przedsiębiorstwach, instytucjach, w których użytkuje się i wykorzystuje systemy informatyczne…
 					</p>
 				</div>
 			</div>
